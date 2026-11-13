@@ -19,56 +19,56 @@ def main():
         print("9. Daily Table Turnover Report")
         print("10. Exit")
 
-        choice = input("Enter your choice: ").strip()
+        choice = input("\nEnter your choice: ").strip()
 
-        if choice == "1":
-            tables.view_tables()
+        try:
+            if choice == "1":
+                print("\n===== TABLE DETAILS =====")
+                tables.view_tables()
 
-        elif choice == "2":
-            reservations.book_reservation()
+            elif choice == "2":
+                reservations.book_reservation()
 
-        elif choice == "3":
-            reservations.check_availability()
+            elif choice == "3":
+                reservations.check_availability()
 
-        elif choice == "4":
-            reservations.view_reservations()
+            elif choice == "4":
+                reservations.view_reservations()
 
-        elif choice == "5":
-            print("\n===== ADD WALK-IN CUSTOMER =====")
+            elif choice == "5":
+                print("\n===== ADD WALK-IN CUSTOMER =====")
+                name = input("Enter customer name: ").strip()
+                phone = input("Enter 10-digit phone number: ").strip()
 
-            name = input("Enter customer name: ").strip()
-            phone = input("Enter 10-digit phone number: ").strip()
+                try:
+                    guests = int(input("Enter number of guests: "))
+                    waitlist.add_to_waitlist(name, phone, guests)
+                except ValueError:
+                    print("Please enter a valid guest count.")
 
-            try:
-                guests = int(input("Enter number of guests: "))
-                entry = waitlist.add_to_waitlist(name, phone, guests)
+            elif choice == "6":
+                waitlist.display_waitlist()
 
-                if entry:
-                    print("\nCustomer added to waitlist!")
-                    print("Queue Number:", entry["queue_number"])
-                    print("Estimated Wait:", entry["estimated_wait"], "minutes")
+            elif choice == "7":
+                operations.check_no_shows()
 
-            except ValueError:
-                print("Please enter a valid guest count.")
+            elif choice == "8":
+                operations.complete_reservation()
 
-        elif choice == "6":
-            waitlist.display_waitlist()
+            elif choice == "9":
+                operations.daily_turnover_report()
 
-        elif choice == "7":
-            operations.check_no_shows()
+            elif choice == "10":
+                print("Thank you for using TableTurn!")
+                break
 
-        elif choice == "8":
-            operations.complete_reservation()
+            else:
+                print("Invalid choice. Please enter a number from 1 to 10.")
 
-        elif choice == "9":
-            operations.daily_turnover_report()
+        except Exception as error:
+            print("An error occurred:", error)
 
-        elif choice == "10":
-            print("Thank you for using TableTurn!")
-            break
-
-        else:
-            print("Invalid choice. Please try again.")
+        input("\nPress Enter to return to the main menu...")
 
 
 if __name__ == "__main__":
