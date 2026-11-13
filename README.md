@@ -4,8 +4,8 @@ A Python-based console application designed to simplify restaurant table reserva
 
 ## Team
 
-1. Namana N(1A24IS131) – Customer Reservation and Table Management
-2. Megha R Naik(1AT24IS117) – Waitlist and Restaurant Operations
+1. **Namana N (1A24IS131)** – Customer Reservation and Table Management
+2. **Megha R Naik (1AT24IS117)** – Waitlist and Restaurant Operations
 
 ## How to Run
 
@@ -19,26 +19,28 @@ A Python-based console application designed to simplify restaurant table reserva
 3. Make sure all Python files are in the same folder.
 4. Open the terminal.
 5. Run the following command:
-    python main.py
 
+   `python main.py`
 
 6. The TableTurn main menu will appear. Select an option by entering its number.
 
-## Features That Work
+## Features
 
 1. **Table Management:** Stores restaurant table details and their seating capacities.
 2. **Best-Fit Table Allocation:** Automatically allocates the smallest suitable available table based on the number of guests.
 3. **Reservation Management:** Allows customers to make reservations by entering their name, phone number, date, time, and number of guests.
 4. **Table Availability:** Checks whether a suitable table is available for the selected date and time.
 5. **Reservation Details:** Displays existing reservations and their booking information.
-6. **Walk-in Waitlist:** Adds walk-in customers when a suitable table is unavailable.
+6. **Walk-in Waitlist:** Allows walk-in customers to be added to the waitlist.
 7. **Estimated Waiting Time:** Provides an estimated waiting time for customers in the waitlist.
-8. **No-Show Management:** Marks reservations as no-show if the customer does not arrive within the 15-minute grace period.
-9. **Automatic Waitlist Promotion:** Attempts to promote a suitable waiting customer when a table becomes available.
-10. **Reservation Completion:** Allows completed reservations to be recorded.
-11. **Daily Table Turnover Report:** Displays completed reservations recorded for the day.
+8. **No-Show Management:** Marks reservations as no-show if the customer does not arrive within the 15-minute grace period when the no-show check is performed.
+9. **Automatic Waitlist Promotion:** Promotes a suitable waiting customer when a reservation is marked as a no-show and its table becomes available.
+10. **Reservation Completion:** Allows reservations to be marked as completed.
+11. **Daily Table Turnover Report:** Displays completed reservations recorded for the current day.
 
-## Sample Run:
+## Sample Run
+
+```text
 ========== TABLETURN ==========
 
 1. View Tables
@@ -65,6 +67,10 @@ Table 6: Capacity 8
 Enter your choice: 10
 
 Thank you for using TableTurn!
+```
 
+## Technologies Used
 
-
+- Python
+- VS Code
+- Git and GitHub
