@@ -7,7 +7,7 @@ A Python-based console application designed to simplify restaurant table reserva
 1. **Namana N (1A24IS131)** – Customer Reservation and Table Management
 2. **Megha R Naik (1AT24IS117)** – Waitlist and Restaurant Operations
 
-## How to Run
+
 
 ### Requirements
 - Python 3.x

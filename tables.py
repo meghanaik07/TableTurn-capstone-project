@@ -2,7 +2,7 @@
 
 from datetime import datetime, timedelta
 
-# Table details
+
 TABLES = {
     1: {"capacity": 2},
     2: {"capacity": 2},
@@ -12,12 +12,12 @@ TABLES = {
     6: {"capacity": 8}
 }
 
-# Shared project data
+
 RESERVATIONS = []
 WAITLIST = []
 DAILY_TURNOVER = []
 
-# Booking duration in minutes
+
 BOOKING_DURATION = 90
 
 
